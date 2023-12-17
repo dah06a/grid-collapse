@@ -1,0 +1,10 @@
+#test {
+  outline: 2px solid black;
+  width: 32px;
+  height: 32px;
+
+  
+  background: url(./tiles/set1/tileset-32x32.png);
+  background-repeat: no-repeat;
+  background-position: -576px -352px;
+}
