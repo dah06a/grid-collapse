@@ -1,4 +1,4 @@
-type TileData = {
+export type TileData = {
   tileType: string,
   tileRow: number,
   tileCol: number,
@@ -8,7 +8,8 @@ type TilesetData = {
   title: string,
   author: string,
   url: URL,
-  tileSize: number,
+  localPath: string,
+  tilesetSize: number,
   tilesetWidth: number,
   tilesetHeight: number,
   tiles: TileData[],
@@ -18,7 +19,8 @@ export const set1TileData: TilesetData = {
   title: 'PunyWorld Overworld Free Tileset',
   author: 'Shade',
   url: new URL('https://opengameart.org/content/16x16-puny-world-tileset'),
-  tileSize: 32,
+  localPath: '/img/tileset-32x32.png',
+  tilesetSize: 32,
   tilesetWidth: 864,
   tilesetHeight: 1216,
   tiles: [
