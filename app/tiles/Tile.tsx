@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import testImg from './set1/tileset-32x32.png'
 
 type TileProps = {
   size: number,
@@ -10,7 +9,6 @@ type TileProps = {
 }
 
 export default function Tile(props: TileProps) {
-  console.log(props);
   const { size, entropy, bgImgPath, xPos, yPos } = props;
   const isCollapsed: boolean = entropy === 0;
 
@@ -21,10 +19,14 @@ export default function Tile(props: TileProps) {
         height: `${size}px`,
         background: isCollapsed ? `url(${bgImgPath})` : 'black',
         backgroundPosition: isCollapsed ? `-${xPos}px -${yPos}px` : '0 0',
-        border: isCollapsed ? 'none' : '1px solid white',
+        border: isCollapsed ? 'none' : '0.5px solid white',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
-      {entropy || 'test'}
+      {entropy || null}
     </Box>
   );
 }

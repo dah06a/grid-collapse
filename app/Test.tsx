@@ -16,7 +16,7 @@ export default function Test() {
   return (
     <Tile 
       size={32}
-      entropy={0}
+      entropy={12}
       bgImgPath={set1TileData.localPath}
       xPos={testGrass.tileRow * set1TileData.tilesetSize}
       yPos={testGrass.tileCol * set1TileData.tilesetSize}
